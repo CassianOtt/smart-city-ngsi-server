@@ -84,15 +84,17 @@ Alternativ direkt über VS Code:
 
 ### Vehicle Endpoint
 
-```bash
+GET Vehicle
 curl.exe http://localhost:8080/vehicle
-```
+POST Vehicle
+curl.exe -X POST http://localhost:8080/vehicle
 
 ### Parking Endpoint
 
-```bash
+GET Parking
 curl.exe http://localhost:8080/parking
-```
+POST Parking
+curl.exe -X POST http://localhost:8080/parking
 
 ---
 
