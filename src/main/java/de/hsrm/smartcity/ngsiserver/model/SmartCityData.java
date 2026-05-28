@@ -1,4 +1,4 @@
-package de.hsrm.smartcity.model;
+package de.hsrm.smartcity.ngsiserver.model;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;

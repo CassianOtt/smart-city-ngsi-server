@@ -1,12 +1,8 @@
-package de.hsrm.smartcity.model;
+package de.hsrm.smartcity.ngsiserver.model;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.Data;
 
-/**
- * DTO für die XML-Abbildung eines Fahrzeugs (Aufgabe 3.2 & 3.3).
- * Entspricht dem <Vehicle>-Element im XML-Schema.
- */
 @Data
 public class VehicleXml {
 
@@ -20,15 +16,14 @@ public class VehicleXml {
     private String street;
     private IsParkedXml isParked;
     private String category;
-}
 
-/**
- * Hilfsklasse für die Parkplatz-Beziehung des Fahrzeugs.
- * Entspricht dem <isParked>-Element im XML-Schema.
- */
-@Data
-class IsParkedXml {
-    private String parkingId;
-    private String observedAt;
-    private String providedBy;
+    /**
+     * Statische innere Klasse -> Braucht keine eigene Datei und ist trotzdem public!
+     */
+    @Data
+    public static class IsParkedXml {
+        private String parkingId;
+        private String observedAt;
+        private String providedBy;
+    }
 }
