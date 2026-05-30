@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="VehicleData">
+
+        <xs:complexType>
+
+            <xs:sequence>
+
+                <xs:element name="Vehicle">
+
+                    <xs:complexType>
+
+                        <xs:sequence>
+
+                            <xs:element name="brandName" type="xs:string"/>
+                            <xs:element name="street" type="xs:string"/>
+
+                            <xs:element name="isParked">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="parkingId" type="xs:string"/>
+                                        <xs:element name="observedAt" type="xs:string"/>
+                                        <xs:element name="providedBy" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="category" type="xs:string"/>
+
+                        </xs:sequence>
+
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                        <xs:attribute name="type" type="xs:string" use="required"/>
+
+                    </xs:complexType>
+
+                </xs:element>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>
